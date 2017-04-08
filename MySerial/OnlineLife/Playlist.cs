@@ -42,7 +42,7 @@ namespace OnlineLife
         {
             if (object.ReferenceEquals(other, null)) return false;
             if (object.ReferenceEquals(other, this)) return true;
-            return Enumerable.SequenceEqual(this.Seasons, other.Seasons);
+            return this.Seasons.SequenceEqual(other.Seasons);
         }
 
         public override bool Equals(object obj)

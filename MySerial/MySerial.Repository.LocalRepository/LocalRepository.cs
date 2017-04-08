@@ -48,7 +48,21 @@ namespace MySerial.Repository.LocalRepository
                 }
             }
 
+            if (filter != null)
+            {
+                serials = serials.FindAll(s => s.Title.Contains(filter.ToLower()));
+            }
+
             return serials;
+        }
+
+        private void AddSerial(SerialDescriptor descriptor)
+        {
+            string directoryPath = m_Path + "/" + descriptor.Title;
+
+            Directory.CreateDirectory(directoryPath);
+
+            LocalSerial.SaveDescriptor(directoryPath, descriptor);
         }
     }
 }

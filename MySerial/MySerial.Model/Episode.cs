@@ -2,7 +2,7 @@
 
 namespace MySerial.Model
 {
-    public class Episode
+    public sealed class Episode : IEquatable<Episode>
     {
         public Episode(string title, IMediaSource media)
         {
@@ -19,5 +19,37 @@ namespace MySerial.Model
         public string Title { get; }
 
         public IMediaSource Media { get; }
+
+        public bool Equals(Episode other)
+        {
+            if (ReferenceEquals(null, other)) return false;
+            if (ReferenceEquals(this, other)) return true;
+            return string.Equals(Title, other.Title) && Media.Equals(other.Media);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            return obj is Episode && Equals((Episode) obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return (Title.GetHashCode() * 397) ^ Media.GetHashCode();
+            }
+        }
+
+        public static bool operator ==(Episode left, Episode right)
+        {
+            return Equals(left, right);
+        }
+
+        public static bool operator !=(Episode left, Episode right)
+        {
+            return !Equals(left, right);
+        }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26206.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SerialProviderLibraries", "SerialProviderLibraries", "{7F04944B-29CC-4988-B98C-0252A539BD34}"
 EndProject
@@ -26,6 +26,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sandbox", "Sandbox", "{7F678815-806D-4A05-91DD-79700854D84F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineLifeDownloader", "OnlineLifeDownloader\OnlineLifeDownloader.csproj", "{49669850-3034-4710-AA2B-EBAFDCA11ED7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{2B9544E7-4329-4666-9381-577121D94870}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalRepositoryTests", "LocalRepositoryTests\LocalRepositoryTests.csproj", "{8A27D6EB-FE99-4844-BACC-641BCF96931F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +69,10 @@ Global
 		{49669850-3034-4710-AA2B-EBAFDCA11ED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49669850-3034-4710-AA2B-EBAFDCA11ED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49669850-3034-4710-AA2B-EBAFDCA11ED7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A27D6EB-FE99-4844-BACC-641BCF96931F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A27D6EB-FE99-4844-BACC-641BCF96931F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A27D6EB-FE99-4844-BACC-641BCF96931F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A27D6EB-FE99-4844-BACC-641BCF96931F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,5 +83,7 @@ Global
 		{BFBD8D1D-EB77-4A96-81BF-1E99BE4CC4D3} = {450CBFD8-503E-4154-BFAB-A723E7C9C6B4}
 		{8E612044-1630-4C9B-8840-C22D4250237F} = {7F678815-806D-4A05-91DD-79700854D84F}
 		{49669850-3034-4710-AA2B-EBAFDCA11ED7} = {7F678815-806D-4A05-91DD-79700854D84F}
+		{2B9544E7-4329-4666-9381-577121D94870} = {8AA5A0A5-35C1-4501-A44F-12A0944D437D}
+		{8A27D6EB-FE99-4844-BACC-641BCF96931F} = {2B9544E7-4329-4666-9381-577121D94870}
 	EndGlobalSection
 EndGlobal

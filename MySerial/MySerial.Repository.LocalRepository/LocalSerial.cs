@@ -55,5 +55,15 @@ namespace MySerial.Repository.LocalRepository
 
             return new LocalSerial(descriptor.Title, descriptor.Description, descriptor.Playlist);
         }
+
+        public static void SaveDescriptor(string directoryPath, SerialDescriptor descriptor)
+        {
+            if (!Directory.Exists(directoryPath))
+                throw new ArgumentException("Specified directory does not exist.");
+
+            string descriptorPath = directoryPath + "/" + SerialDescriptorFile;
+
+            File.WriteAllText(descriptorPath, descriptor.ToJson());
+        }
     }
 }

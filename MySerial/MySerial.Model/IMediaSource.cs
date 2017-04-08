@@ -1,7 +1,11 @@
-﻿namespace MySerial.Model
+﻿using System;
+
+namespace MySerial.Model
 {
     public interface IMediaSource
     {
-        // TODO: Unimplemented
+        Uri PlayUri { get; }
+
+        Uri DownloadUri { get; }
     }
 }

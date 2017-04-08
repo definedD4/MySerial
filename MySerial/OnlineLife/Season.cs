@@ -26,7 +26,7 @@ namespace OnlineLife
             if (object.ReferenceEquals(other, null)) return false;
             if (object.ReferenceEquals(other, this)) return true;
             return this.Comment == other.Comment
-                && Enumerable.SequenceEqual(this.Episodes, other.Episodes);
+                && this.Episodes.SequenceEqual(other.Episodes);
         }
 
         public override bool Equals(object obj)
